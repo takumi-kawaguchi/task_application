@@ -1,11 +1,15 @@
+-# :javascript
+-#   -# console.log("出力できているよ");
+
+
 %h1 タスク一覧表
-- @tasks.each do |task|
-  %table
-    %thead
-      %tr
-        %th タスク名
-        %th 優先度
-        %th 終了予定日
+%table
+  %thead
+    %tr
+      %th タスク名
+      %th 優先度
+      %th 終了予定日
+  - @tasks.each do |task|
     %tbody
       %tr
         %td= link_to task.title, task_path(task)

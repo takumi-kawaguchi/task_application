@@ -3,6 +3,6 @@
   = f.input :title
   = f.input :description
   = f.input :priority
-  = f.input :status
+  = f.input :status, collection: ["未着手", "着手", "完了"]
   = f.input :finish_at
   = f.button :submit
